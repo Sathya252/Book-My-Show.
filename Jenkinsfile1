@@ -9,7 +9,7 @@ pipeline {
     environment {
         SCANNER_HOME = tool 'sonar-scanner'
         DOCKER_IMAGE = 'rohith252/bms:latest'
-        EKS_CLUSTER_NAME = 'BMS-eks'
+        EKS_CLUSTER_NAME = 'rohith-eks-BMS'
         AWS_REGION = 'ap-south-1'
     }
 
@@ -22,7 +22,7 @@ pipeline {
 
         stage('Checkout from Git') {
             steps {
-                git branch: 'main', url: 'https://github.com/Sathya252/Book-My-Show.git'
+                git branch: 'main', url: 'https://github.com/Sathya252/Book-My-Show..git'
                 sh 'ls -la'  // Verify files after checkout
             }
         }
